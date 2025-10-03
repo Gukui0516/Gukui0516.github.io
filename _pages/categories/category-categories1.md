@@ -1,9 +1,9 @@
 ---
-title: "언어공부"
+title: "개발공부"
 layout: category
-permalink: /categories/language/
+permalink: /categories/study/
 author_profile: true
-taxonomy: language
+taxonomy: study
 sidebar:
   nav: "categories"
 ---
