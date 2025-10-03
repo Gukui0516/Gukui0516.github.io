@@ -22,7 +22,7 @@ categories:
     url: /categories/language/
   - title: "프로젝트"
     url: /categories/project/
-  # - title: "Categories3"
-  #   url: /categories/categories3/
+  - title: "일기"
+    url: /categories/diary/
   # - title: "Categories4"
   #   url: /categories/categories4/
