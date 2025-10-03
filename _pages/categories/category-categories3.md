@@ -1,7 +1,7 @@
 ---
 title: "일기장"
 layout: category
-permalink: /categories/diary/
+permalin/diary/
 author_profile: true
 taxonomy: diary
 sidebar:
