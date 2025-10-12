@@ -1,19 +1,23 @@
 {
   "jekyll-post": {
     "prefix": "post",
-    "description": "Minimal Mistakes post front matter",
+    "description": "Minimal Mistakes post front matter (categories + slug + permalink)",
     "body": [
       "---",
+      "share: true",
+      "layout: single",
       "title: \"$1\"",
       "excerpt: \"$2\"",
       "categories:",
-      "  - categories1",
-      "tags: [ ]",
-      "permalink: /categories1/${TM_FILENAME_BASE}/",
+      "  - ${3:diary}",
+      "tags: [${4}]",
+      "permalink: /categories/${3}/post/${TM_FILENAME_BASE}",
       "toc: true",
       "toc_sticky: true",
-      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} +09:00",
       "last_modified_at: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "slug: ${TM_FILENAME_BASE}",
+      "basename: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}-${TM_FILENAME_BASE}",
       "---",
       "",
       "# $1",
@@ -23,10 +27,10 @@
   },
   "mm-figure": {
     "prefix": "mmfig",
-    "description": "Minimal Mistakes figure include",
+    "description": "Minimal Mistakes figure include (relative_url safe)",
     "body": [
       "{% include figure",
-      "   image_path=\"/assets/images/posts_img/${TM_FILENAME_BASE}/$1\"",
+      "   image_path=\"{{ '/assets/images/posts_img/${TM_FILENAME_BASE}/$1' | relative_url }}\"",
       "   alt=\"$2\"",
       "   caption=\"$3\"",
       "   class=\"text-center\" %}"
