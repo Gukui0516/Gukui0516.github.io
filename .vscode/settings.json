@@ -11,11 +11,6 @@
   "yaml.validate": true,
   "yaml.format.enable": true,
   "yaml.schemas": {},
-  "markdownlint.config": {
-    "MD013": false,
-    "MD033": false,
-    "MD041": false
-  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
