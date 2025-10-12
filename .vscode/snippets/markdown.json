@@ -1,0 +1,35 @@
+{
+  "jekyll-post": {
+    "prefix": "post",
+    "description": "Minimal Mistakes post front matter",
+    "body": [
+      "---",
+      "title: \"$1\"",
+      "excerpt: \"$2\"",
+      "categories:",
+      "  - categories1",
+      "tags: [ ]",
+      "permalink: /categories1/${TM_FILENAME_BASE}/",
+      "toc: true",
+      "toc_sticky: true",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "last_modified_at: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "---",
+      "",
+      "# $1",
+      "",
+      "$0"
+    ]
+  },
+  "mm-figure": {
+    "prefix": "mmfig",
+    "description": "Minimal Mistakes figure include",
+    "body": [
+      "{% include figure",
+      "   image_path=\"/assets/images/posts_img/${TM_FILENAME_BASE}/$1\"",
+      "   alt=\"$2\"",
+      "   caption=\"$3\"",
+      "   class=\"text-center\" %}"
+    ]
+  }
+}

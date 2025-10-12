@@ -1,0 +1,31 @@
+{
+  "framework": {
+    "id": "jekyll"
+  },
+  "content": {
+    "pageFolders": [
+      "_posts",
+      "_pages"
+    ]
+  },
+  "taxonomy": {
+    "customTaxonomy": [
+      "categories",
+      "tags"
+    ]
+  },
+  "static": {
+    "publicFolder": "/assets",
+    "folder": "assets"
+  },
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.preview.host": "http://localhost:4000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/_posts"
+    }
+  ],
+  "frontMatter.git.enabled": true
+}

@@ -1,0 +1,13 @@
+{
+  "framework": { "id": "jekyll" },
+  "content": {
+    "pageFolders": ["_posts", "_pages"]
+  },
+  "taxonomy": {
+    "customTaxonomy": ["categories", "tags"]
+  },
+  "static": {
+    "publicFolder": "/assets",
+    "folder": "assets"
+  }
+}
