@@ -7,8 +7,7 @@
   "markdown.preview.breaks": false,
   "pasteImage.path": "${projectRoot}/assets/images/posts_img/${currentFileNameWithoutExt}",
   "pasteImage.forceUnixStyleSeparator": true,
-  "pasteImage.prefix": "/assets/images/posts_img/${currentFileNameWithoutExt}/",
-  "pasteImage.insertPattern": "![${imageFileName}]({{ '${prefix}${imageFileName}' | relative_url }})",
+  "pasteImage.insertPattern": "![${imageFileName}](/assets/images/posts_img/${currentFileNameWithoutExt}/${imageFileName})",
   "yaml.validate": true,
   "yaml.format.enable": true,
   "yaml.schemas": {},
@@ -19,7 +18,20 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 26,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 64,
+    "editor.lineNumbers": "off",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.suggest.showSnippets": true,
+    "editor.tabCompletion": "on",
+    "editor.minimap.enabled": false
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
