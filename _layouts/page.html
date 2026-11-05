@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="reader">
+  <article class="win">
+    {% include window-bar.html title=page.title file=page.file %}
+    <div class="doc">
+      <h1 class="doc-title">{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </article>
+</div>

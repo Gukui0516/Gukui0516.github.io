@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% assign cat = page.categories[0] %}
+{% assign cat_url = cat | prepend: '/' | append: '/' | relative_url %}
+<div class="finder-page">
+  <article class="win">
+    <div class="bar"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><span class="bar-title">{{ page.title }}.md</span><span class="bar-tag">{{ cat }}/</span></div>
+    <div class="article">
+      <header class="article-head">
+        <p class="crumb"><a href="{{ cat_url }}">{{ site.data.categories[cat] }}</a>/{{ page.date | date: '%Y' }}년</p>
+        <h1 class="doc-title">{{ page.title }}</h1>
+        <time class="date-tag" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+      </header>
+      <div class="doc doc--post">
+        {{ content }}
+      </div>
+      <footer class="article-foot">
+        {% if page.tags and page.tags.size > 0 %}
+        <ul class="tags">
+          {% for tag in page.tags %}<li># {{ tag }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        <a class="btn btn--primary" href="{{ cat_url }}">글 목록으로</a>
+      </footer>
+    </div>
+  </article>
+</div>

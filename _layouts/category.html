@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign posts = site.categories[page.cat] %}
+<div class="finder-page">
+  <div class="win finder">
+    <div class="bar"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><h1 class="bar-title">{{ page.title }}</h1><span class="bar-tag">{{ page.file }}</span></div>
+    {% if posts and posts.size > 0 %}
+    <ul class="tiles">
+      {% for post in posts %}
+      <li><a class="tile" href="{{ post.url | relative_url }}">
+        <span class="thumb{% unless post.image %} thumb--default{% endunless %}"><img src="{{ post.image | default: '/assets/cover-default.png' | relative_url }}" alt="" loading="lazy"></span>
+        <strong>{{ post.title }}</strong>
+        <time class="stamp" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+      </a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">아직 글이 없어요.</p>
+    {% endif %}
+  </div>
+</div>

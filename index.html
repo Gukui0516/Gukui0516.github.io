@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign latest = site.posts | first %}
+<div class="stage">
+  <div class="wedge" aria-hidden="true"></div>
+  <div class="desk">
+    <section class="hero">
+      <h1><span>만들고 싶은거</span><span class="sel">만들어요</span></h1>
+      <p class="lede">{{ site.description }}</p>
+    </section>
+    <aside class="side">
+      {% if latest %}
+      <a class="win toast" href="{{ latest.url | relative_url }}"><span class="badge" aria-hidden="true">G</span><b>새 글</b><small>{{ latest.date | date: '%Y-%m-%d' }}</small><span>{{ latest.title }}</span></a>
+      {% endif %}
+      {% include folders.html %}
+      <section class="win dialog" id="dialog" aria-labelledby="dialog-title">
+        <h2 id="dialog-title">{{ site.data.home.dialog.title }}</h2>
+        <p>{{ site.data.home.dialog.body }}</p>
+        <div class="btns"><a class="btn btn--primary" href="{{ site.data.home.dialog.link | relative_url }}">{{ site.data.home.dialog.button }}</a><button class="btn" type="button" id="later">나중에</button></div>
+      </section>
+    </aside>
+  </div>
+</div>
+<section class="lower" id="posts">
+  <div class="win" data-drag>
+    {% include window-bar.html title="최근 글" file="posts/" %}
+    {% include post-list.html posts=site.posts highlight=true %}
+  </div>
+  {% if site.data.home.todo.size > 0 %}
+  <div class="win" data-drag>
+    {% include window-bar.html title="할 일" file="todo.txt" %}
+    <ul class="todo">
+      {% for item in site.data.home.todo %}
+      <li><code>{% if item.done %}[x]{% else %}[ ]{% endif %}</code>{{ item.text }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>

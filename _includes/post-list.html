@@ -1,0 +1,5 @@
+<ul class="rows">
+  {% for post in include.posts %}
+  <li><a class="row" href="{{ post.url | relative_url }}"{% if forloop.first and include.highlight %} data-latest{% endif %}><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%m-%d' }}</time><strong>{{ post.title }}</strong><small>{{ site.data.categories[post.categories[0]] }}</small></a></li>
+  {% endfor %}
+</ul>

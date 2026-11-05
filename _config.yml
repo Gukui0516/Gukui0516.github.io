@@ -1,0 +1,19 @@
+title: 만들고 싶은거 만들어요
+description: 게임을 만들면서 겪은 일과 공부한 내용을 적습니다.
+url: https://gukui0516.github.io
+lang: ko_KR
+timezone: Asia/Seoul
+author: Gukui0516
+
+github_url: https://github.com/Gukui0516
+email: dhtkdguq0516@gmail.com
+
+permalink: /:categories/:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
