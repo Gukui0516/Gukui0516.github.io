@@ -12,6 +12,15 @@
     });
   }
 
+  // Chrome does not match :focus on an embedded video while focus is inside it, so mark it by hand.
+  var markFocus = function () {
+    document.querySelectorAll(".video iframe").forEach(function (frame) {
+      frame.classList.toggle("is-focused", document.activeElement === frame);
+    });
+  };
+  window.addEventListener("blur", function () { setTimeout(markFocus, 0); });
+  window.addEventListener("focus", markFocus);
+
   // On wide screens the small home windows can be dragged by their title bars.
   document.querySelectorAll('[data-drag]').forEach(function (win) {
     var bar = win.querySelector('.bar');
