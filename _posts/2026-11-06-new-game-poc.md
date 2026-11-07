@@ -1,6 +1,7 @@
 ---
 title: NEW 게임 PoC (메카닉 PoC)
 category: log
+permalink: /log/1/
 image: https://i.ytimg.com/vi/J1YWpSH-QC8/maxresdefault.jpg
 tags:
   - PoC
