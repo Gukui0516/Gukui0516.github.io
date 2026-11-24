@@ -140,11 +140,11 @@ p { margin: 0; }
 .doc p:not(.meta) { margin-top: 16px; }
 .doc ul, .doc ol { margin: 16px 0 0; padding-left: 24px; }
 .doc li + li { margin-top: 8px; }
-.doc img { display: block; max-width: calc(100% - 6px); height: auto; margin-top: 24px; border: 1px solid var(--color-ink); border-radius: 4px; box-shadow: 6px 6px 0 var(--color-ink); }
+.doc img, .doc video { display: block; max-width: calc(100% - 6px); height: auto; margin-top: 24px; border: 1px solid var(--color-ink); border-radius: 4px; box-shadow: 6px 6px 0 var(--color-ink); }
 .doc--post > p:has(> img) { max-width: none; }
 .doc--post > p > img { width: min(100% - 6px, 560px); margin-right: auto; margin-left: auto; }
 .doc .photo-figure { width: min(100% - 6px, 560px); margin: 24px auto 0; }
-.doc .photo-figure img { width: 100%; max-width: none; margin-top: 0; }
+.doc .photo-figure img, .doc .photo-figure video { width: 100%; max-width: none; margin-top: 0; }
 .doc .photo-figure figcaption { margin-top: 12px; color: var(--color-muted); font-size: 15px; text-align: center; }
 .doc .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; width: min(100% - 6px, 560px); margin: 24px auto 0; overflow: hidden; border: 1px solid var(--color-ink); border-radius: 4px; background: var(--color-ink); box-shadow: 6px 6px 0 var(--color-ink); }
 .doc .photo-grid img { width: 100%; max-width: none; margin-top: 0; border: 0; border-radius: 0; box-shadow: none; }
