@@ -19,7 +19,7 @@
     <nav class="menu" aria-label="주 메뉴">
       <a href="{{ '/log/' | relative_url }}"{% if page.url == '/log/' or page.categories contains 'log' %} aria-current="page"{% endif %}>개발 일지</a>
       <a href="{{ '/study/' | relative_url }}"{% if page.url == '/study/' or page.categories contains 'study' %} aria-current="page"{% endif %}>개발 공부</a>
-      <a href="{{ '/hobby/' | relative_url }}"{% if page.url == '/hobby/' or page.categories contains 'hobby' %} aria-current="page"{% endif %}>취미개발</a>
+      <a href="{{ '/hobby/' | relative_url }}"{% if page.url == '/hobby/' or page.categories contains 'hobby' %} aria-current="page"{% endif %}>취미</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>소개</a>
     </nav>
     <span class="status" id="clock">SEOUL</span>
