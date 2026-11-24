@@ -44,6 +44,4 @@ Live 2d를 토스 프론트에 띄워야한다!
   <figcaption>(GPU 써본다고 했다가 파란색으로 나오는 버그가 있었지..)</figcaption>
 </figure>
 
-RGB 말고 어째서 BGR을 쓰는거냐!!
-
 <small>모델: Live2D Inc. 샘플 모델 "모모세 히요리(桃瀬ひより)"</small>
